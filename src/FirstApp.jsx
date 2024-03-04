@@ -1,12 +1,12 @@
-// function App() {
-//     //document.createElement...
-//     return <h1>Hola mundo</h1>;
-// }
-
-// export default App;
+const getSaludo = (name) => {
+    return "Hola " + name;
+};
 
 export const FirstApp = () => {
-  return (
-    <h1>FirstApp</h1>
-  )
-}
+    return (
+        <>
+            <h1>{getSaludo("Juan")}</h1>
+            {/* <code>{JSON.stringify(newMessage)}</code> */}
+        </>
+    );
+};
