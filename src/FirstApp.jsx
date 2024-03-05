@@ -1,13 +1,27 @@
+import PropTypes from "prop-types";
 // const getSaludo = (name) => {
 //     return "Hola " + name;
 // };
 
-export const FirstApp = () => {
+export const FirstApp = ({ title, subTitle, name }) => {
+    // console.log(props);
+
     return (
         <>
-            {/* <h1>{getSaludo("Juan")}</h1>
-            <code>{JSON.stringify(newMessage)}</code> */}
-            <h1>Juan Cam</h1>
+            <h1>{title}</h1>
+            <h2>{subTitle}</h2>
+            <h3>{name}</h3>
         </>
     );
+};
+
+FirstApp.propTypes = {
+    title: PropTypes.string.isRequired,
+    subTitle: PropTypes.string,
+};
+
+FirstApp.defaultProps = {
+    title: "No hay titulo",
+    subTitle: "No hay Subtitulo",
+    name: "Juan Campuzano",
 };
